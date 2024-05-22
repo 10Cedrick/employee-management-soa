@@ -1,5 +1,7 @@
 const Sequelize = require("sequelize");
 const dotenv = require("dotenv")
+
+dotenv.config()
 const dialectOptions = process.env.NODE_ENV === 'production' ? {
     ssl: {
       require: true,

@@ -5,6 +5,9 @@ module.exports = (sequelize, Sequelize) => {
         name: {
           type: Sequelize.STRING(64),
         },
+        firstName: {
+            type: Sequelize.STRING(64),
+        },
         address: {
             type: Sequelize.STRING(128),
         },
@@ -15,13 +18,12 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING(64),
         },
         hireDate: {
-            type: DataTypes.DATE,
-            defaultValue: DataTypes.NOW
+            type: Sequelize.DataTypes.DATE,
+            defaultValue: Sequelize.DataTypes.NOW
         },
         departmentId: {
-            type: DataTypes.INTEGER, // Référence à l'ID du département
-            allowNull: false
-          },
+            type: Sequelize.DataTypes.INTEGER, // Référence à l'ID du département
+        },
       },{
         timestamps: false, // Désactive les timestamps automatiques (createdAt, updatedAt)
       }
