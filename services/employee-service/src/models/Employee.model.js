@@ -23,7 +23,7 @@ module.exports = (sequelize, Sequelize) => {
         },
         departmentId: {
             type: Sequelize.DataTypes.INTEGER, // Référence à l'ID du département
-        },
+        }
       },{
         timestamps: false, // Désactive les timestamps automatiques (createdAt, updatedAt)
       }
