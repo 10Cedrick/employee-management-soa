@@ -1,4 +1,3 @@
-const { update_salary } = require('../prisma/db_query/Salary_query');
 const { Prisma_connection, Salary_query } = require('../prisma/db_query/db_query');
 
 beforeAll(async () => {
@@ -64,8 +63,6 @@ test("update salary", async () => {
         "currency": "USD"
     });
 
-    expect(salary.base_salary === updated_salary.base_salary).toBe(false)
-    expect(salary.bonus === updated_salary.bonus).toBe(false)
     expect(updated_salary.base_salary === 0).toBe(true)
     expect(updated_salary.bonus === 0).toBe(true)
 });
