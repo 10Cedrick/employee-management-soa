@@ -23,6 +23,9 @@ module.exports = (sequelize, Sequelize) => {
         },
         departmentId: {
             type: Sequelize.DataTypes.INTEGER, // Référence à l'ID du département
+        },
+        salaryId: {
+            type: Sequelize.DataTypes.INTEGER,
         }
       },{
         timestamps: false, // Désactive les timestamps automatiques (createdAt, updatedAt)
