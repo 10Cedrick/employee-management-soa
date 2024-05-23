@@ -25,7 +25,7 @@ db.sequelize.sync({ force: false})
   })
   .catch((err) => {
     console.log("Error syncing db: ", err.message);
-  });
+});
 
 
 
