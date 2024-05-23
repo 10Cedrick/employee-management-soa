@@ -12,9 +12,7 @@ const dialectOptions = process.env.NODE_ENV === 'production' ? {
 
 
 const sequelize = new Sequelize(
-    process.env.POSTGRES_DB,
-    process.env.POSTGRES_USER,
-    process.env.POSTGRES_PASSWORD,
+    process.env.DATABASE_URL,
     {
         host: process.env.POSTGRES_HOST,
         dialect: "postgres",

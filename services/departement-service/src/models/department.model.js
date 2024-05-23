@@ -2,10 +2,10 @@ module.exports = (sequelize, Sequelize) => {
     const Department = sequelize.define(
         "departments",
         {
-            department_designation : {
+            designation : {
                 type: Sequelize.STRING(64),
             },
-            department_description : {
+            description : {
                 type: Sequelize.STRING(255),
             },
             manager_id : {
@@ -21,5 +21,7 @@ module.exports = (sequelize, Sequelize) => {
         {
             timestamps: false, // Désactive les timestamps automatiques (createdAt, updatedAt)
         }
-    )
+    );
+  
+    return Department;
 }
