@@ -11,8 +11,11 @@ module.exports = (sequelize, Sequelize) => {
             manager_id : {
                 type : Sequelize.DataTypes.INTEGER,
             },
-            location_id : {
-                type: Sequelize.DataTypes.INTEGER,
+            building_name : {
+                type : Sequelize.STRING(64),
+            },
+            floor_number : {
+                type : Sequelize.STRING(10),
             }
         },
         {

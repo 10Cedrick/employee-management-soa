@@ -30,12 +30,9 @@ db.sequelize = sequelize;
     Models/tables
 */
 db.Department = require('./department.model.js')(sequelize, Sequelize);
-db.Location = require('./location.model.js')(sequelize, Sequelize);
 
 /**
  * Relationships
  */
-db.Location.hasMany(db.Department, {as: "departments"})
-db.Department.belongsTo(db.Location, { as: "location" });
 
 module.exports = db;
